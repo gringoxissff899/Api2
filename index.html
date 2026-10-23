@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preload" as="image" href="assets/logo-xUpwrsFZ.png"><link rel="stylesheet" href="assets/styles-Bbf7HLYJ.css" data-precedence="default"><title>YouTube</title><meta name="description" content="YouTube"><meta name="author" content="YouTube"><meta name="theme-color" content="#000000"><meta property="og:title" content="YouTube"><meta property="og:description" content="YouTube"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@Lovable"><meta name="twitter:title" content="YouTube"><meta name="twitter:description" content="YouTube"><meta property="og:image" content="../pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/60dcd802-afda-4cee-b5f3-f8f844bb570e/7b4qh13dnopQ.png"><meta name="twitter:image" content="../pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/60dcd802-afda-4cee-b5f3-f8f844bb570e/7b4qh13dnopQ.png"><link rel="modulepreload" href="assets/index-BpJ3Uiz2.js"><link rel="modulepreload" href="assets/routes-Cx-1wOG6.js"><link rel="icon" href="favicon.png" type="image/png"><link rel="icon" type="image/png" sizes="16x16" href="icon-16.png"><link rel="icon" type="image/png" sizes="32x32" href="icon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><link rel="icon" type="image/png" sizes="512x512" href="icon-512.png"><link rel="apple-touch-icon" sizes="152x152" href="icon-152.png"><link rel="apple-touch-icon" sizes="167x167" href="icon-167.png"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"><link rel="manifest" href="manifest.webmanifest">
+<style>
+	#lovable-badge {
+		--badge-bg: #1b1b1b;
+		--badge-text: #c5c1b9;
+		--badge-text-hover: #dcdad5;
+		--badge-radius: 6px;
+		--badge-padding: 8px;
+		--badge-gap: 6px;
+		--badge-shadow: 
+			0 0 0 1px rgba(0, 0, 0, 0.88),
+			0 1px 0 0 rgba(0, 0, 0, 0.04),
+			0 2px 2px -1px rgba(0, 0, 0, 0.08),
+			0 4px 4px -2px rgba(0, 0, 0, 0.08),
+			0 8px 8px -4px rgba(0, 0, 0, 0.08),
+			0 16px 16px -8px rgba(0, 0, 0, 0.08);
+		--badge-transition-duration: 0.2s;
+		--badge-transition-easing: cubic-bezier(0.16, 1, 0.32, 1);
+		--focus-color: #575ECF;
+		--focus-offset: 2px;
+		--focus-width: 2px;
+		
+		position: fixed;
+		bottom: 12px;
+		right: 12px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		z-index: 1000000;
+		background-color: var(--badge-bg) !important;
+		color: var(--badge-text) !important;
+		border-radius: var(--badge-radius);
+		box-shadow: var(--badge-shadow) !important;
+		font-size: 12px;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		font-weight: 400 !important;
+		text-transform: none !important;
+		font-feature-settings: normal !important;
+		transform: translateZ(0);
+		will-change: transform, opacity;
+		transition: opacity var(--badge-transition-duration) var(--badge-transition-easing);
+	}
+
+	#lovable-badge.closing {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	#lovable-badge-cta {
+		display: flex;
+		align-items: baseline;
+		gap: var(--badge-gap);
+		box-sizing: border-box;
+		padding: 4px var(--badge-padding) 0;
+		height: 100%;
+		color: inherit;
+		text-decoration: none;
+		white-space: nowrap;
+		border-radius: var(--badge-radius) 0 0 var(--badge-radius);
+		transition: 
+			background-color var(--badge-transition-duration) ease,
+			color var(--badge-transition-duration) ease,
+			transform 0.1s ease;
+	}
+
+	#lovable-badge-cta:hover {
+		background: rgba(255, 255, 255, 0.04);
+		color: var(--badge-text-hover);
+	}
+
+	#lovable-badge-cta:active {
+		transform: scale(0.98);
+	}
+
+	#lovable-badge-cta:focus {
+		outline: none;
+	}
+
+	#lovable-badge-cta:focus-visible {
+		outline: var(--focus-width) solid var(--focus-color);
+		outline-offset: var(--focus-offset);
+		z-index: 1;
+	}
+
+	#lovable-badge-text {
+		line-height: 1;
+	}
+
+	/* The wordmark baseline sits at y=12 of the 16px logo; an empty 12px box
+	   makes that the flex baseline so the text aligns to it on any system font. */
+	#lovable-badge-logo {
+		position: relative;
+		display: block;
+		width: 52px;
+		height: 12px;
+	}
+
+	#lovable-badge-logo svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#lovable-badge-divider {
+		width: 1px;
+		height: 24px;
+		background-color: rgba(255, 255, 255, 0.04);
+		flex-shrink: 0;
+	}
+
+	#lovable-badge-close {
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+		min-height: 24px;
+		cursor: pointer;
+		background: none;
+		border: none;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0 var(--badge-radius) var(--badge-radius) 0;
+		flex-shrink: 0;
+		transition: 
+			background-color var(--badge-transition-duration) ease,
+			transform 0.1s ease;
+	}
+
+	#lovable-badge-close:hover {
+		background: rgba(255, 255, 255, 0.04);
+	}
+
+	#lovable-badge-close:active {
+		transform: scale(0.92);
+	}
+
+	#lovable-badge-close:focus {
+		outline: none;
+	}
+
+	#lovable-badge-close:focus-visible {
+		outline: var(--focus-width) solid var(--focus-color);
+		outline-offset: calc(var(--focus-offset) * -1);
+		z-index: 1;
+	}
+
+	#lovable-badge-close svg path {
+		fill: var(--badge-text);
+		transition: fill var(--badge-transition-duration) ease;
+	}
+
+	#lovable-badge-close:hover svg path {
+		fill: var(--badge-text-hover);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		#lovable-badge,
+		#lovable-badge-cta,
+		#lovable-badge-close,
+		#lovable-badge-close svg path {
+			transition: none;
+		}
+		
+		#lovable-badge-cta:active,
+		#lovable-badge-close:active {
+			transform: none;
+		}
+	}
+
+	@media (prefers-contrast: high) {
+		#lovable-badge {
+			--badge-bg: #000;
+			--badge-text: #fff;
+			--badge-text-hover: #fff;
+			border: 2px solid currentColor;
+		}
+		
+		#lovable-badge-cta:focus-visible,
+		#lovable-badge-close:focus-visible {
+			outline-width: 3px;
+		}
+	}
+</style>
+<script defer="" src="~flock.js" data-proxy-url="/~api/analytics"></script><script defer="" src="__l5e/events.b21a279f52bb8621.js" data-artifact-kind="dwl_content_hash" data-artifact-id="3f24437e3963b8c753eed61838f774006a72b613ea29613df0e91a0c112f08cd" data-commit-sha="06d7f3a8c6e064286a4aa059a1816d79b93dbf1e" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF8yMDZtNXI0cTFmOXpqYmNmeDY4cG15M2h2MiIsImFydGlmYWN0X2tpbmQiOiJkd2xfY29udGVudF9oYXNoIiwiYXJ0aWZhY3RfaWQiOiIzZjI0NDM3ZTM5NjNiOGM3NTNlZWQ2MTgzOGY3NzQwMDZhNzJiNjEzZWEyOTYxM2RmMGU5MWEwYzExMmYwOGNkIiwiY29tbWl0X3NoYSI6IjA2ZDdmM2E4YzZlMDY0Mjg2YTRhYTA1OWExODE2ZDc5YjkzZGJmMWUiLCJleHAiOjE3OTUyNjUzNzN9.ClzF77qEKPjDBX19oSzvVpQGoE24bXanB8gcblY3yUM"></script></head><body><!--$--><style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --blue: #2563eb; --blue-light: #60a5fa; --blue-dark: #1e3a8a; --blue-mid: #1e40af;
+  --bg: #000000; --card-bg: rgba(14, 14, 14, 0.95);
+  --border: rgba(37, 99, 235, 0.35); --text: #f3f4f6;
+  --muted: #9ca3af; --dim: #6b7280;
+  --item-bg: rgba(0,0,0,0.55); --item-border: rgba(37,99,235,0.25);
+}
+html, body { height: 100%; background: var(--bg); font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif; color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+.animated-bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; }
+#neuralCanvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.neural-title { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: clamp(28px, 10vw, 80px); font-weight: 900; color: rgba(37,99,235,0.12); letter-spacing: 10px; text-transform: uppercase; pointer-events: none; white-space: nowrap; animation: bgPulse 4s ease-in-out infinite; }
+@keyframes bgPulse { 0%,100% { opacity: 0.12; transform: translate(-50%,-50%) scale(1); } 50% { opacity: 0.2; transform: translate(-50%,-50%) scale(1.02); } }
+#loadingScreen { position: fixed; inset: 0; background: #000; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.5s; }
+#loadingScreen.fade-out { opacity: 0; pointer-events: none; }
+.loader-logo { width: 110px; height: 110px; animation: loaderPulse 1.8s ease-in-out infinite; border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.loader-logo img { width: 100%; height: 100%; object-fit: cover; }
+@keyframes loaderPulse { 0%,100% { transform: scale(0.94); filter: drop-shadow(0 0 8px rgba(37,99,235,0.4)); } 50% { transform: scale(1.06); filter: drop-shadow(0 0 28px rgba(37,99,235,0.8)); } }
+#toast { position: fixed; top: 16px; left: 50%; transform: translateX(-50%) translateY(-120px); background: rgba(10,10,10,0.97); border-radius: 14px; padding: 11px 20px; display: flex; align-items: center; gap: 10px; z-index: 9998; min-width: 240px; max-width: 88vw; transition: transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275); border: 1px solid var(--blue); box-shadow: 0 8px 32px rgba(0,0,0,0.6); }
+#toast.show { transform: translateX(-50%) translateY(0); }
+#toast.success { border-color: #10b981; }
+#toast.error { border-color: #ef4444; }
+#toast.loading { border-color: var(--blue-light); }
+.toast-icon { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+#toast.success .toast-icon { background: #10b981; color: #fff; }
+#toast.error .toast-icon { background: #ef4444; color: #fff; }
+#toast.loading .toast-icon { background: var(--blue); color: #fff; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.toast-msg { font-size: 13px; font-weight: 500; color: var(--text); }
+.sz-container { position: relative; z-index: 2; min-height: 100dvh; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.main-card { background: var(--card-bg); backdrop-filter: blur(24px) saturate(160%); -webkit-backdrop-filter: blur(24px) saturate(160%); border-radius: clamp(16px, 4vw, 22px); border: 1px solid var(--border); box-shadow: 0 0 0 1px rgba(37,99,235,0.08), 0 0 60px rgba(37,99,235,0.2); width: 100%; max-width: 420px; padding: clamp(20px, 5vw, 32px); max-height: 92dvh; overflow-y: auto; overflow-x: hidden; }
+.main-card::-webkit-scrollbar { width: 4px; }
+.main-card::-webkit-scrollbar-track { background: transparent; }
+.main-card::-webkit-scrollbar-thumb { background: rgba(37,99,235,0.4); border-radius: 4px; }
+.sz-hidden { display: none !important; }
+.header { text-align: center; margin-bottom: 24px; }
+.logo { width: clamp(72px, 20vw, 92px); height: clamp(72px, 20vw, 92px); border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.app-title { font-size: clamp(20px, 5vw, 26px); font-weight: 800; letter-spacing: 1px; background: linear-gradient(135deg, var(--blue), var(--blue-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 4px; }
+.app-subtitle { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+.copyright { font-size: 10px; color: var(--dim); font-weight: 700; letter-spacing: 1px; }
+.form-group { margin-bottom: 18px; }
+.form-label { display: block; font-size: 12px; color: #d1d5db; margin-bottom: 7px; font-weight: 600; letter-spacing: 0.3px; }
+.form-input { width: 100%; padding: 13px 15px; background: rgba(0,0,0,0.55); border: 1px solid rgba(37,99,235,0.35); border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.25s; -webkit-appearance: none; }
+.form-input::placeholder { color: var(--dim); }
+.form-input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,0.18); background: rgba(0,0,0,0.7); }
+.btn { width: 100%; padding: 14px 20px; border: none; border-radius: 12px; font-size: 14px; font-weight: 800; cursor: pointer; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.25s; -webkit-tap-highlight-color: transparent; }
+.btn:active { transform: scale(0.97); }
+.btn-primary { background: linear-gradient(135deg, var(--blue), #3b82f6); color: #fff; box-shadow: 0 6px 20px rgba(37,99,235,0.4); margin-top: 4px; }
+.btn-whatsapp { background: linear-gradient(135deg, #25D366, #128C7E); color: #fff; box-shadow: 0 6px 20px rgba(37,211,102,0.3); margin-top: 12px; }
+.btn-inject { background: linear-gradient(135deg, var(--blue), var(--blue-mid)); color: #fff; box-shadow: 0 8px 24px rgba(37,99,235,0.45); margin-top: 20px; font-size: 15px; padding: 15px 20px; border-radius: 14px; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.info-box { background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.28); border-radius: 12px; padding: 15px; margin-top: 18px; text-align: center; }
+.info-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+.info-value { font-size: 15px; font-weight: 700; color: var(--blue-light); }
+.info-subtext { font-size: 11px; color: var(--dim); margin-top: 4px; }
+.tabs { display: flex; gap: 6px; background: rgba(0,0,0,0.45); border: 1px solid rgba(37,99,235,0.18); border-radius: 14px; padding: 5px; margin-bottom: 18px; }
+.tab { flex: 1; padding: 10px 4px; border: none; background: transparent; color: var(--dim); border-radius: 10px; cursor: pointer; font-size: clamp(9px, 2.5vw, 11px); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: flex; flex-direction: column; align-items: center; gap: 5px; transition: all 0.25s; -webkit-tap-highlight-color: transparent; }
+.tab svg { width: 18px; height: 18px; transition: color 0.25s; }
+.tab.active { background: linear-gradient(135deg, var(--blue), var(--blue-mid)); color: #fff; box-shadow: 0 4px 14px rgba(37,99,235,0.4); }
+.tab-content { display: none; animation: fadeUp 0.25s ease; }
+.tab-content.active { display: block; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.section-title { font-size: 10px; font-weight: 800; color: var(--dim); text-transform: uppercase; letter-spacing: 2px; margin: 0 0 12px; display: flex; align-items: center; gap: 8px; }
+.section-title::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.07); }
+.feature-item { background: var(--item-bg); border: 1px solid var(--item-border); border-radius: 12px; padding: clamp(10px, 3vw, 14px); margin-bottom: 10px; display: flex; align-items: center; gap: clamp(10px, 3vw, 14px); transition: border-color 0.25s; width: 100%; height: 85px; box-sizing: border-box; }
+.feature-item:last-child { margin-bottom: 0; }
+.feature-icon-wrap { width: 38px; height: 38px; flex-shrink: 0; border-radius: 9px; background: rgba(37,99,235,0.15); display: flex; align-items: center; justify-content: center; }
+.feature-icon-wrap svg { width: 18px; height: 18px; color: var(--blue-light); }
+.feature-info { flex: 1; min-width: 0; }
+.feature-title { font-size: clamp(11px, 3vw, 13px); font-weight: 700; color: var(--text); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.feature-desc { font-size: clamp(10px, 2.5vw, 12px); color: var(--muted); line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+.toggle { position: relative; width: 48px; height: 28px; flex-shrink: 0; background: #374151; border-radius: 14px; cursor: pointer; transition: background 0.3s; -webkit-tap-highlight-color: transparent; }
+.toggle.active { background: linear-gradient(135deg, var(--blue), #3b82f6); }
+.toggle-thumb { position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; background: #fff; border-radius: 50%; transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1); box-shadow: 0 2px 6px rgba(0,0,0,0.35); }
+.toggle.active .toggle-thumb { transform: translateX(20px); }
+.logout-link { display: block; text-align: center; margin-top: 20px; color: var(--dim); font-size: 13px; text-decoration: none; transition: color 0.25s; cursor: pointer; }
+.logout-link:hover { color: var(--blue-light); }
+</style><div class="animated-bg"><canvas id="neuralCanvas"></canvas><div class="neural-title">sielzada</div></div><div id="toast"><div class="toast-icon" id="toastIcon"></div><div class="toast-msg" id="toastMsg"></div></div><div id="loadingScreen"><div class="loader-logo" id="loaderLogo"><img src="assets/logo-xUpwrsFZ.png" alt="Sielzada Logo"></div></div><div id="loginScreen" class="sz-container sz-hidden"><div class="main-card"><div class="header"><div class="logo" id="loginLogo"><img src="assets/logo-xUpwrsFZ.png" alt="Sielzada Logo"></div><h1 class="app-title">sielzada</h1><p class="app-subtitle">Valide sua key para continuar</p><p class="copyright">copyright : sielzada</p></div><form id="loginForm" autocomplete="off"><div class="form-group"><label for="keyInput" class="form-label">Sua Key</label><input type="text" id="keyInput" class="form-input" placeholder="Cole sua key aqui" autocomplete="off" spellcheck="false"></div><button type="submit" id="loginBtn" class="btn btn-primary">Validar Key</button></form><a href="https://discord.gg/yMZzkjJhs" target="_blank" rel="noreferrer" class="btn btn-whatsapp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.031.054a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"></path></svg>Comprar Key</a><div id="keyInfoLogin" class="info-box sz-hidden"><div class="info-label">Válido até</div><div id="validUntilLogin" class="info-value"></div><div id="timeLeftLogin" class="info-subtext"></div><div id="keyWarnLogin" class="sz-hidden" style="margin-top:10px;padding:8px 10px;border-radius:10px;background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.5);color:#fca5a5;font-size:12px;font-weight:600"></div></div></div></div><div id="mainApp" class="sz-container sz-hidden"><div class="main-card"><div class="header" style="margin-bottom:18px"><div class="logo" id="appLogo"><img src="assets/logo-xUpwrsFZ.png" alt="Sielzada Logo"></div><h1 class="app-title">sielzada</h1><p class="copyright">copyright : sielzada</p></div><div class="tabs" role="tablist"><button class="tab active" data-tab="features" role="tab" aria-selected="true" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>Funções</button><button class="tab" data-tab="optimization" role="tab" aria-selected="false" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Otimização</button><button class="tab" data-tab="account" role="tab" aria-selected="false" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Conta</button></div><div id="features" class="tab-content active"><div class="section-title">Combate</div><div id="featuresList"></div></div><div id="optimization" class="tab-content"><div class="section-title">Sistema</div><div id="optimizationList"></div></div><div id="account" class="tab-content"><div class="section-title">Informações</div><div class="info-box"><div class="info-label">Expira em</div><div id="expirationDate" class="info-value">Carregando...</div><div id="daysLeft" class="info-subtext">Verificando...</div></div><a class="logout-link">Sair da conta</a></div><button class="btn btn-inject" id="injectBtn" type="button">ATIVAR NO JOGO</button><div id="hiddenPayload" data-code="x64//x77//x55//x29//x99//freefiremax//x99//freefireth.com//x336" aria-hidden="true" style="display:none;visibility:hidden;position:absolute;width:0;height:0;overflow:hidden">x64//x77//x55//x29//x99//freefiremax//x99//freefireth.com//x336</div></div></div><script>(function(a,f){let l;try{l=JSON.parse(sessionStorage.getItem(a)||"{}")}catch{return}const n=l?.[f||history.state?.__TSR_key];let c=!1;for(const t in n){const e=n[t],o=e?.scrollX,s=e?.scrollY;if(Number.isFinite(o)&&Number.isFinite(s)){if(t==="window")scrollTo(o,s),c=!0;else if(t)try{const r=document.querySelector(t);r&&(r.scrollLeft=o,r.scrollTop=s)}catch{}}}if(c)return;const i=location.hash.slice(1);if(i){const t=history.state?.__hashScrollIntoViewOptions??!0;if(t){const e=document.getElementById(i);e&&e.scrollIntoView(t)}return}scrollTo(0,0)})("tsr-scroll-restoration-v1_3");document.currentScript.remove()</script><!--/$--><script class="$tsr" id="$tsr-stream-barrier">(self.$R=self.$R||{})["tsr"]=[];self.$_TSR={h(){this.hydrated=!0,this.c()},e(){this.streamEnded=!0,this.c()},c(){this.hydrated&&this.streamEnded&&(delete self.$_TSR,delete self.$R.tsr)},p(e){this.initialized?e():this.buffer.push(e)},buffer:[]};$_TSR.router=($R=>$R[0]={manifest:$R[1]={routes:$R[2]={__root__:$R[3]={preloads:$R[4]=["/assets/index-BpJ3Uiz2.js"],scripts:$R[5]=[$R[6]={attrs:$R[7]={type:"module",async:!0,src:"/assets/index-BpJ3Uiz2.js"}}]},"/":$R[8]={preloads:$R[9]=["/assets/routes-Cx-1wOG6.js"]}}},matches:$R[10]=[$R[11]={i:"__root__�",u:1792673373404,s:"success",ssr:!0},$R[12]={i:"��",u:1792673373404,s:"success",ssr:!0}],lastMatchId:"��"})($R["tsr"]);$_TSR.e();document.currentScript.remove()</script><script type="module" async="" src="assets/index-BpJ3Uiz2.js"></script>
+<aside id="lovable-badge" role="complementary" dir="ltr" lang="en" aria-label="Edit with Lovable">
+	<a id="lovable-badge-cta" target="_blank" href="https://lovable.dev/projects/lovp_206m5r4q1f9zjbcfx68pmy3hv2?utm_source=lovable-badge" rel="noopener nofollow" aria-label="Edit with Lovable">
+		<span id="lovable-badge-text">Edit with</span>
+		<span id="lovable-badge-logo"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="16" fill="none" viewBox="0 0 52 16">
+  <path fill="#FCFBF8" fill-rule="evenodd" d="M20.318 5.25c.643 0 1.206.14 1.69.418a2.81 2.81 0 0 1 1.118 1.191c.266.513.4 1.115.4 1.807s-.134 1.296-.4 1.812a2.81 2.81 0 0 1-1.118 1.193c-.484.278-1.047.418-1.69.418s-1.208-.14-1.695-.418a2.85 2.85 0 0 1-1.125-1.193c-.262-.516-.393-1.12-.393-1.812s.131-1.294.393-1.807a2.848 2.848 0 0 1 1.125-1.191c.487-.279 1.052-.418 1.695-.418Zm0 1.425c-.27 0-.504.076-.7.228-.193.147-.34.37-.443.67-.102.295-.153.66-.153 1.093 0 .435.05.801.153 1.1.102.3.25.524.443.676.196.147.43.22.7.22.27 0 .502-.073.694-.22.193-.152.341-.375.443-.67.103-.299.153-.667.153-1.106 0-.65-.112-1.145-.337-1.481a1.08 1.08 0 0 0-.953-.51ZM32.7 5.25c.61 0 1.127.1 1.549.3.422.197.74.48.953.849.217.368.325.809.325 1.32v2.704c0 .29.02.562.062.812.044.245.108.4.19.466V12h-1.935a5.895 5.895 0 0 1-.105-.684 7.745 7.745 0 0 1-.02-.228 2.293 2.293 0 0 1-.151.203c-.205.242-.47.437-.793.584-.32.143-.685.215-1.094.215-.406 0-.77-.08-1.094-.24a1.845 1.845 0 0 1-.756-.682 1.984 1.984 0 0 1-.27-1.045c0-.606.178-1.069.535-1.388.356-.324.87-.534 1.542-.633l1.125-.16c.225-.032.403-.074.534-.123a.622.622 0 0 0 .288-.196.549.549 0 0 0 .093-.327.65.65 0 0 0-.11-.367.702.702 0 0 0-.32-.27c-.14-.07-.31-.105-.51-.105-.32 0-.576.083-.768.251-.193.164-.298.39-.314.676h-1.923c.016-.434.147-.82.393-1.155.25-.34.596-.604 1.039-.792.442-.189.954-.283 1.535-.283Zm.99 3.498a.98.98 0 0 1-.215.14 2.49 2.49 0 0 1-.584.178l-.473.092c-.315.061-.553.156-.713.283-.155.127-.233.305-.233.534 0 .23.084.412.252.547.168.135.383.203.645.203s.494-.058.694-.173c.201-.118.355-.282.461-.49.11-.21.166-.448.166-.714v-.6Zm4.526-2.375c.065-.125.138-.243.221-.349.197-.25.437-.44.719-.571.282-.135.6-.203.952-.203.528 0 .988.138 1.377.412.389.275.688.67.896 1.186.21.512.314 1.12.314 1.824 0 .7-.107 1.309-.32 1.825-.213.512-.518.906-.915 1.18-.393.275-.854.412-1.383.412-.352 0-.667-.062-.946-.184a1.832 1.832 0 0 1-.7-.554 2.2 2.2 0 0 1-.234-.383V12h-1.843V3h1.862v3.373Zm1.284.296c-.274 0-.51.085-.707.253-.192.163-.338.397-.436.7a3.376 3.376 0 0 0-.148 1.05c0 .406.05.759.148 1.058.098.299.243.53.436.694.197.164.433.246.707.246.279 0 .512-.082.7-.246.193-.164.336-.395.43-.694.099-.3.148-.652.148-1.058 0-.405-.05-.757-.147-1.056-.095-.299-.238-.53-.43-.694a1.015 1.015 0 0 0-.7-.253Zm9.416-1.419c.602 0 1.136.131 1.604.393.466.262.829.643 1.086 1.143.263.5.394 1.097.394 1.794 0 .25-.002.449-.006.596H47.51c.018.288.071.538.164.75a1.3 1.3 0 0 0 .491.596c.214.13.465.196.757.196.319 0 .583-.082.792-.246.209-.167.34-.403.393-.706h1.862a2.48 2.48 0 0 1-.485 1.235 2.54 2.54 0 0 1-1.051.805c-.439.188-.949.283-1.53.283-.655 0-1.225-.125-1.708-.375a2.672 2.672 0 0 1-1.13-1.143c-.267-.508-.4-1.137-.4-1.887 0-.712.14-1.327.418-1.843a2.86 2.86 0 0 1 1.155-1.186c.491-.27 1.051-.405 1.678-.405Zm-.044 1.345c-.274 0-.516.068-.725.203a1.29 1.29 0 0 0-.479.59 2.045 2.045 0 0 0-.132.498h2.562a1.873 1.873 0 0 0-.138-.602 1.061 1.061 0 0 0-.418-.516 1.243 1.243 0 0 0-.67-.173Z" clip-rule="evenodd"></path>
+  <path fill="#FCFBF8" d="m26.605 9.995 1.342-4.566h1.924L27.628 12h-2.07l-2.33-6.57h1.98l1.397 4.565Zm-13.013.143h2.256c1.632 0 1.421 1.837 1.418 1.861h-5.603V3h1.93v7.138Zm31.516 1.861h-1.862V3h1.862v8.999Z"></path>
+  <path fill="url(#a)" fill-rule="evenodd" d="M2.7 3c1.492 0 2.7 1.192 2.7 2.663v1.012h.9c1.49 0 2.7 1.192 2.7 2.662S7.791 12 6.3 12H0V5.663C0 4.193 1.209 3 2.7 3Z" clip-rule="evenodd"></path>
+  <defs>
+    <radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(-1.54236 7.07838 -10.231 -2.15602 4.627 5.022)" gradientUnits="userSpaceOnUse">
+      <stop offset=".106" stop-color="#FE7B02"></stop>
+      <stop offset=".394" stop-color="#FE3F21"></stop>
+      <stop offset=".608" stop-color="#F858BC"></stop>
+      <stop offset=".929" stop-color="#575ECF"></stop>
+    </radialGradient>
+  </defs>
+</svg>
+
+</span>
+	</a>
+	
+	<span id="lovable-badge-divider" aria-hidden="true"></span>
+	
+	<button id="lovable-badge-close" aria-label="Dismiss" title="Dismiss" type="button">
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+			<path d="M10.646 4.646a.5.5 0 1 1 .707.708L8.707 8l2.646 2.646a.5.5 0 1 1-.707.707L8 8.707l-2.646 2.646a.5.5 0 1 1-.708-.707L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708L8 7.293l2.646-2.647Z"></path>
+		</svg>
+	</button>
+</aside>
+<script>
+	(() => {
+		if (window.self !== window.top || navigator.userAgent.includes('puppeteer')) {
+			const badge = document.querySelector('#lovable-badge');
+			if (badge) {
+				badge.style.display = 'none';
+			}
+			return;
+		}
+
+		const closeButton = document.querySelector('#lovable-badge-close');
+		if (closeButton) {
+			closeButton.addEventListener('click', function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+				const badge = document.querySelector('#lovable-badge');
+				if (badge) {
+					badge.classList.add('closing');
+					setTimeout(function() {
+						if (badge) {
+							badge.style.display = 'none';
+						}
+					}, 240);
+				}
+			});
+		}
+	})();
+</script>
+</body></html>
